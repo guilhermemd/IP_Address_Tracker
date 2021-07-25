@@ -26,53 +26,54 @@
   
 </head>
 <body>
+  <div id="img_back">
+    <h1>IP Address Tracker</h1>
 
-  <h1>IP Address Tracker</h1>
+    <div class="search__ipaddress">
+      <input id="input_search_ipAddress" type="text" placeholder="Search for any IP address or domain">
+      <button id="btn_ip_search" type="button"><img src="./assets/images/icon-arrow.svg"/></button>
+    </div>
 
-  <div class="search__ipaddress">
-    <input id="input_search_ipAddress" type="text" placeholder="Search for any IP address or domain">
-    <button id="btn_ip_search" type="button">></button>
+    <div class="info">
+      <div class="info__ipAddress">
+        <h3 
+          class="info__ipAddress__title, title"
+        >
+          IP Address
+        </h3>
+        <p id="ip" class="info__ipAddress__address"></p>
+      </div>
+
+      <div class="info__location">
+        <h3
+          class="info__location__title, title"
+        >
+          Location
+      </h3>
+        <p id="location" class="info__location__address"></p>
+      </div>
+
+      <div class="info__timezone">
+        <h3
+          class="info__timezone__title, title"
+        >
+          Timezone
+        </h3>
+        <p id="utc" class="info__timezone__time"></p>
+      </div>
+
+      <div class="info__isp">
+        <h3
+          class="info__isp__title, title"
+        >
+          ISP
+        </h3>
+        <p id="isp" class="info__isp__name"></span>
+      </div>
+    </div>
   </div>
 
-  <div class="info">
-    <div class="info__ipAddress">
-      <h3 
-        class="info__ipAddress__title, title"
-      >
-        IP Address
-      </h3>
-      <p id="ip" class="info__ipAddress__address"></p>
-    </div>
-
-    <div class="info__location">
-      <h3
-        class="info__location__title, title"
-      >
-        Location
-    </h3>
-      <p id="location" class="info__location__address"></p>
-    </div>
-
-    <div class="info__timezone">
-      <h3
-        class="info__timezone__title, title"
-      >
-        Timezone
-      </h3>
-      <p id="utc" class="info__timezone__time"></p>
-    </div>
-
-    <div class="info__isp">
-      <h3
-        class="info__isp__title, title"
-      >
-        ISP
-      </h3>
-      <p id="isp" class="info__isp__name"></span>
-    </div>
-  </div>
-
-  <div id="mapid"></div>
+      <div id="mapid"></div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

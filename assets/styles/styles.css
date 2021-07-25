@@ -66,6 +66,9 @@ body {
     align-items: center;
     justify-content: center;
   }
+  #img_back {
+    background-image: url("../images/pattern-bg.png");
+  }
 
   #location {
     text-align: center;
