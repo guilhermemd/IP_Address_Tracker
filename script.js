@@ -6,13 +6,13 @@ async function fetchApi(param) {
 
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
-  return data;
+  const ip = document.getElementById("ip");
+  ip.textContent = data.ip
+  
 }
 
 btnIpSearch.addEventListener("click", () => {
   let inputIpSearch = document.getElementById("input_search_ipAddress").value;
   const dataFromIP = fetchApi(inputIpSearch);
-  console.log(dataFromIP);
 });
 
