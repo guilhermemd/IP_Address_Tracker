@@ -15,7 +15,8 @@ renderMap(51.505, -0.09);
 async function fetchApi(param) {
   const mapDiv = document.getElementById("mapid");
   mapDiv.remove();
-  const mapDiv2 = document.createElement("div").setAttribute("id", "mapid");
+  const mapDiv2 = document.createElement("div");
+  mapDiv2.setAttribute("id", "mapid");
   document.body.appendChild(mapDiv2);
 
   let url = `
