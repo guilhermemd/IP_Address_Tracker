@@ -80,4 +80,7 @@ body {
     color: var(--Dark-Gray);
     letter-spacing: 1px;
   }
+  #mapid { 
+    height: 180px; 
+  }
 }
