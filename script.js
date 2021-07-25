@@ -1,7 +1,8 @@
 const btnIpSearch = document.getElementById("btn_ip_search");
 
 async function fetchApi(param) {
-  let url = `https://geo.ipify.org/api/v1?apiKey=at_Wd99BZuqQULBmHMT5cOt9OFhIgPGW&ipAddress=${param}`;
+  let url = `
+  https://geo.ipify.org/api/v1?apiKey=at_LDZhbJcnGgV7mnIZ9vV0E82Ubm429&ipAddress=${param}`;
 
   const response = await fetch(url);
   const data = await response.json();
