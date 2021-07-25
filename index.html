@@ -5,26 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
+  <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 <body>
 
-  IP Address Tracker
+  <h1>IP Address Tracker</h1>
 
-  Search for any IP address or domain
+  <div class="search__ipaddress">
+    <input type="text" placeholder="Search for any IP address or domain">
+    <button type="button">></button>
+  </div>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+  <div class="info">
+    <div class="info__ipAddress">
+      <h3 
+        class="info__ipAddress__title, title"
+      >
+        IP Address
+      </h3>
+      <p  class="info__ipAddress__address">192.168.0.1</p>
+    </div>
+
+    <div class="info__location">
+      <h3
+        class="info__location__title, title"
+      >
+        Location
+    </h3>
+      <p class="info__location__address">Brooklyn, NY 10001</span>
+    </div>
+
+    <div class="info__timezone">
+      <h3
+        class="info__timezone__title, title"
+      >
+        Timezone
+      </h3>
+      <p class="info__timezone__time">UTC-<span>05:00</span></p>
+    </div>
+
+    <div class="info__isp">
+      <h3
+        class="info__isp__title, title"
+      >
+        ISP
+      </h3>
+      <p class="info__isp__name">SpaceX Starlink</span>
+    </div>
+  </div>
+
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
