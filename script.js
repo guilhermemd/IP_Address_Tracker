@@ -10,7 +10,10 @@ async function fetchApi(param) {
   ip.textContent = data.ip
   const location = document.getElementById("location");
   location.textContent = `${data.location.city}, ${data.location.region} - ${data.location.country}`;
-  
+  const utc = document.getElementById("utc");
+  utc.textContent = `UTC ${data.location.timezone}`;
+  const isp = document.getElementById("isp");
+  isp.textContent = data.isp;
 }
 
 btnIpSearch.addEventListener("click", () => {
