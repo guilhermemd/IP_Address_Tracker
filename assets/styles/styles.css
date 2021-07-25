@@ -69,6 +69,11 @@ body {
   #img_back {
     background-image: url("../images/pattern-bg.png");
   }
+  #img_back > h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+  }
 
   #location {
     text-align: center;
@@ -84,6 +89,13 @@ body {
     letter-spacing: 1px;
   }
   #mapid { 
-    height: 180px; 
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
   }
 }
