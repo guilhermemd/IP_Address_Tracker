@@ -67,6 +67,10 @@ body {
     justify-content: center;
   }
 
+  #location {
+    text-align: center;
+  }
+  
   .title {
     text-align: center;
     margin-bottom: 10px;

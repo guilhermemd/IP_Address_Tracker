@@ -8,6 +8,8 @@ async function fetchApi(param) {
   const data = await response.json();
   const ip = document.getElementById("ip");
   ip.textContent = data.ip
+  const location = document.getElementById("location");
+  location.textContent = `${data.location.city}, ${data.location.region} - ${data.location.country}`;
   
 }
 
