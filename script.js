@@ -1,16 +1,17 @@
 const btnIpSearch = document.getElementById("btn_ip_search");
-function renderMap (lat, lng) {
-  let mymap = L.map('mapid', { zoomControl: false}).setView([lat, lng], 13);
-  let ratio = 1;
-  let myIcon = L.icon({
-    iconUrl: 'assets/images/icon-location.svg',
-    iconSize: [(46 * ratio), (56 * ratio)],
-    iconAnchor: [23, 56],
-    popupAnchor: [-3, -76],
-    // shadowUrl: 'my-icon-shadow.png',
-    // shadowSize: [68, 95],
-    shadowAnchor: [22, 94]
+let mymap
+let ratio = 1;
+let myIcon = L.icon({
+  iconUrl: 'assets/images/icon-location.svg',
+  iconSize: [(46 * ratio), (56 * ratio)],
+  iconAnchor: [23, 56],
+  popupAnchor: [-3, -76],
+  // shadowUrl: 'my-icon-shadow.png',
+  // shadowSize: [68, 95],
+  shadowAnchor: [22, 94]
 });
+function renderMap (lat, lng) {
+  mymap = L.map('mapid', { zoomControl: false}).setView([lat, lng], 13);
   L.marker([lat, lng], { icon: myIcon }).addTo(mymap);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -24,12 +25,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 renderMap(40.650, -73.949);
 
 async function fetchApi(param) {
-  const mapDiv = document.getElementById("mapid");
-  mapDiv.remove();
-  const mapDiv2 = document.createElement("div");
-  mapDiv2.setAttribute("id", "mapid");
-  document.body.appendChild(mapDiv2);
-
   let url = `
   https://geo.ipify.org/api/v1?apiKey=at_LDZhbJcnGgV7mnIZ9vV0E82Ubm429&ipAddress=${param}`;
 
@@ -43,7 +38,12 @@ async function fetchApi(param) {
   utc.textContent = `UTC ${data.location.timezone}`;
   const isp = document.getElementById("isp");
   isp.textContent = data.isp;
-  renderMap(data.location.lat, data.location.lng);
+
+  const latlng = L.latLng(data.location.lat, data.location.lng);
+  mymap.flyTo(latlng);
+  L.marker([data.location.lat, data.location.lng], {
+    icon: myIcon, 
+  }).addTo(mymap);
 }
 
 btnIpSearch.addEventListener("click", () => {
