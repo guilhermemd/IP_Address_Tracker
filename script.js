@@ -49,9 +49,19 @@ function renderLocationInfo(data) {
   }).addTo(mymap);
 }
 
+const toastShow = () => {
+  const timerShowToast = 1500;
+  const toastElement = document.querySelector('.snackbar');
+  toastElement.classList.add('show');
+  setTimeout(() => {
+    toastElement.classList.remove('show');
+  }, timerShowToast);
+};
+
 btnIpSearch.addEventListener("click", () => {
   let inputIpSearch = document.getElementById("input_search_ipAddress").value;
   fetchApi(inputIpSearch);
+  toastShow();
 });
 
 

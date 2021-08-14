@@ -134,3 +134,73 @@ body {
     flex-direction: row;
   }
 }
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_snackbar */
+.snackbar {
+  background-color: rgb(74, 75, 170);
+  border-radius: 20px;
+  color: white;
+  font-size: 17px;
+  left: 50%;
+  margin-left: -125px;
+  padding: 20px;
+  position: fixed;
+  height: max-content;
+  text-align: center;
+  top: 80vh;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.snackbar a {
+  color: white;
+}
+
+.snackbar.show {
+  animation: fadein 0.5s , fadeout 0.5s 2.5s;
+  visibility: visible;
+}
+
+@keyframes fadein {
+
+  from {
+    opacity: 0;
+    top: 80vh;}
+
+  to {
+    opacity: 1;
+    top: 80.5vh;}
+}
+
+@keyframes fadein {
+
+  from {
+    opacity: 0;
+    top: 80vh;}
+
+  to {
+    opacity: 1;
+    top: 80.5vh;}
+}
+
+@keyframes fadeout {
+
+  from {
+    opacity: 1;
+    top: 80.5vh;}
+
+  to {
+    opacity: 0;
+    top: 80vh;}
+}
+
+@keyframes fadeout {
+
+  from {
+    opacity: 1;
+    top: 80.5vh;}
+
+  to {
+    opacity: 0;
+    top: 80vh;}
+}
