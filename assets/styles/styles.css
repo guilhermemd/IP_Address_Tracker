@@ -34,6 +34,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 0 3px hsl(244deg 22% 85%);
+    background: white;
   }
 
   .search__ipaddress input {
@@ -46,6 +47,10 @@ body {
     width: 18%;
     padding: 20px;
     background-color: var(--Black);
+  }
+
+  .search__ipaddress button:active {
+    opacity: 0.6;
   }
 
   .info {
