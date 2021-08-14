@@ -33,6 +33,7 @@ body {
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 0 0 3px hsl(244deg 22% 85%);
   }
 
   .search__ipaddress input {
