@@ -30,6 +30,7 @@ body {
   }
 
   .search__ipaddress input {
+    
     width: 82%;
     padding: 20px;
   }
@@ -48,6 +49,9 @@ body {
     padding: 25px;
     gap: 25px;
     border-radius: 10px;
+    transform: translateY(+25px);
+    z-index: 2;
+    position: relative;
   }
 
   .info > div >  p {
@@ -68,11 +72,15 @@ body {
   }
   #img_back {
     background-image: url("../images/pattern-bg.png");
+    height: 40vh;
   }
+
   #img_back > h1 {
     color: white;
     text-align: center;
     font-size: 1.6rem;
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
 
   #location {
@@ -89,7 +97,7 @@ body {
     letter-spacing: 1px;
   }
   #mapid { 
-    height: 100vh;
+    height: 60vh;
     z-index: 1;
   }
 
