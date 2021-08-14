@@ -3,6 +3,7 @@
   --Dark-Gray: hsl(0, 0%, 59%);
   --white: white;
   --font: 'Rubik', sans-serif;
+  --Black: black;
 }
 
 * {
@@ -27,6 +28,8 @@ body {
     display: flex;
     max-width: 330px;
     margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
   }
 
   .search__ipaddress input {
@@ -38,6 +41,7 @@ body {
   .search__ipaddress button {
     width: 18%;
     padding: 20px;
+    background-color: var(--Black);
   }
 
   .info {
@@ -48,7 +52,7 @@ body {
     margin: 0 auto;
     padding: 25px;
     gap: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
     transform: translateY(+25px);
     z-index: 2;
     position: relative;
@@ -105,5 +109,13 @@ body {
     position: absolute;
     bottom: 0;
     z-index: 2;
+  }
+
+  #btn_ip_search {
+    border: none;
+  }
+
+  #input_search_ipAddress {
+    border: none;
   }
 }
