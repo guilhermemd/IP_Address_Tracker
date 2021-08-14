@@ -1,7 +1,17 @@
 const btnIpSearch = document.getElementById("btn_ip_search");
 function renderMap (lat, lng) {
-  let mymap = L.map('mapid', { zoomControl: false})
-    mymap.setView([lat, lng], 13);
+  let mymap = L.map('mapid', { zoomControl: false}).setView([lat, lng], 13);
+  let ratio = 1;
+  let myIcon = L.icon({
+    iconUrl: 'assets/images/icon-location.svg',
+    iconSize: [(46 * ratio), (56 * ratio)],
+    iconAnchor: [23, 56],
+    popupAnchor: [-3, -76],
+    // shadowUrl: 'my-icon-shadow.png',
+    // shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+});
+  L.marker([lat, lng], { icon: myIcon }).addTo(mymap);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
