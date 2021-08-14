@@ -58,7 +58,7 @@ body {
   padding: 50px 0 50px 0;
   gap: 25px;
   border-radius: 20px;
-  transform: translateY(+65px);
+  /* transform: translateY(+65px); */
   z-index: 2;
   position: relative;
 }

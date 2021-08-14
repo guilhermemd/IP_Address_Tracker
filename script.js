@@ -54,3 +54,10 @@ btnIpSearch.addEventListener("click", () => {
   fetchApi(inputIpSearch);
 });
 
+
+let height_Img = +(window.getComputedStyle(document.getElementById("img_back")).height). replace('px', '') / 6 + "px";
+
+let info_css = document.getElementsByClassName("info")[0];
+console.log(height_Img);
+
+info_css.style.transform = `translateY(${height_Img})`;
