@@ -21,7 +21,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiZ3VpbGhlcm1lbWQiLCJhIjoiY2tyanE1OTRyMHN0NjJxa2RhdTVqczB5NiJ9.p_jM5xrwXD7DP1nfI0PuRw'
 }).addTo(mymap);
 }
-renderMap(51.505, -0.09);
+renderMap(40.650, -73.949);
 
 async function fetchApi(param) {
   const mapDiv = document.getElementById("mapid");
