@@ -27,9 +27,12 @@ renderMap(40.650, -73.949);
 async function fetchApi(param) {
   let url = `
   https://geo.ipify.org/api/v1?apiKey=at_LDZhbJcnGgV7mnIZ9vV0E82Ubm429&ipAddress=${param}`;
-
   const response = await fetch(url);
   const data = await response.json();
+  renderLocationInfo(data)
+}
+
+function renderLocationInfo(data) {
   const ip = document.getElementById("ip");
   ip.textContent = data.ip
   const location = document.getElementById("location");
@@ -48,6 +51,6 @@ async function fetchApi(param) {
 
 btnIpSearch.addEventListener("click", () => {
   let inputIpSearch = document.getElementById("input_search_ipAddress").value;
-  const dataFromIP = fetchApi(inputIpSearch);
+  fetchApi(inputIpSearch);
 });
 
