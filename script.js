@@ -51,3 +51,33 @@ btnIpSearch.addEventListener("click", () => {
   const dataFromIP = fetchApi(inputIpSearch);
 });
 
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+  const mapDiv = document.getElementById("mapid");
+  mapDiv.remove();
+  const mapDiv2 = document.createElement("div");
+  mapDiv2.setAttribute("id", "mapid");
+  document.body.appendChild(mapDiv2);
+  console.log('Sua posição atual é:');
+  console.log('Latitude : ' + crd.latitude);
+  console.log('Longitude: ' + crd.longitude);
+  console.log('Mais ou menos ' + crd.accuracy + ' metros.');
+  renderMap(crd.latitude, crd.longitude);
+};
+
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
+
+const btn_location = document.getElementById("btn_location")
+
+btn_location.addEventListener("click", () => {
+  navigator.geolocation.getCurrentPosition(success, error, options);
+});
+
