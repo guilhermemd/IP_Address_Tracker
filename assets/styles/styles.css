@@ -55,10 +55,10 @@ body {
   background: var(--white);
   max-width: 1000px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 50px 0 50px 0;
   gap: 25px;
   border-radius: 20px;
-  transform: translateY(+25px);
+  transform: translateY(+65px);
   z-index: 2;
   position: relative;
 }
@@ -84,6 +84,7 @@ body {
   background-image: url("../images/pattern-bg.png");
   height: 40vh;
   padding: 10px;
+  background-size: cover;
 }
 
 #img_back>h1 {
