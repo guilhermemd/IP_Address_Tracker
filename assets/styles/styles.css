@@ -397,9 +397,9 @@ body {
   flex-direction: column;
   background: var(--white);
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 0 50px 0;
-  gap: 25px;
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.75rem 0 0.75rem 0;
+  gap: 0.56rem;
   border-radius: 20px;
   /* transform: translateY(+65px); */
   z-index: 2;
@@ -408,7 +408,7 @@ body {
 
 .info>div>p {
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: var(--Very-Dark-Gray);
 }
 
@@ -434,9 +434,9 @@ body {
   color: white;
   text-align: center;
   font-family: Rubik;
-  font-size: 1.6rem;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  font-size: 1.2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 #location {
@@ -445,7 +445,7 @@ body {
 
 .title {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.31rem;
   text-transform: uppercase;
   font-size: .675rem;
   font-weight: 500;
@@ -475,6 +475,17 @@ body {
 @media screen and (min-width: 768px){
   .info {
     flex-direction: row;
+    /* display: flex;
+    flex-direction: column;
+    background: var(--white);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+    gap: 25px;
+    border-radius: 20px;
+    /* transform: translateY(+65px); */
+    /* z-index: 2;
+    position: relative; */
   }
 }
 
