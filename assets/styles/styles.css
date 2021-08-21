@@ -475,8 +475,7 @@ body {
 @media screen and (min-width: 768px){
   .info {
     flex-direction: row;
-    /* display: flex;
-    flex-direction: column;
+    display: flex;
     background: var(--white);
     max-width: 1000px;
     margin: 0 auto;
@@ -484,8 +483,8 @@ body {
     gap: 25px;
     border-radius: 20px;
     /* transform: translateY(+65px); */
-    /* z-index: 2;
-    position: relative; */
+    z-index: 2;
+    position: relative;
   }
 }
 
