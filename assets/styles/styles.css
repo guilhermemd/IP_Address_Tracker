@@ -401,6 +401,7 @@ body {
   padding: 0.75rem 0 0.75rem 0;
   gap: 0.56rem;
   border-radius: 20px;
+  top: 6vh;
   /* transform: translateY(+65px); */
   z-index: 2;
   position: relative;
@@ -483,6 +484,7 @@ body {
     gap: 25px;
     border-radius: 20px;
     /* transform: translateY(+65px); */
+    top: 15vh;
     z-index: 2;
     position: relative;
   }
