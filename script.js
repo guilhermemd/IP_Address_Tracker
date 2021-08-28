@@ -71,3 +71,5 @@ btnIpSearch.addEventListener("click", () => {
 // console.log(height_Img);
 
 // info_css.style.transform = `translateY(${height_Img})`;
+
+// window.addEventListener('resize', (x) => console.log(x.target.screen))
